@@ -1,5 +1,5 @@
 class CloudfrontLinkChecker
-  def self.method
-    5
+  def self.scan_files
+
   end
 end
