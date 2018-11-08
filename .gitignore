@@ -1,3 +1,4 @@
 .idea
-cloudfront-link-checker.iml
+*.iml
 out
+*.gem
