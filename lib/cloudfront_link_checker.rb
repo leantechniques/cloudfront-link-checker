@@ -10,7 +10,7 @@ class CloudfrontLinkChecker
         results = File.readlines(file, :encoding => "UTF-8").grep /href="(.*)"/i
         results.each do |line|
           links = line.match(/href=(["'])(.*?)\1/i)[2]
-          exclude_start_with_list = ["https:", "#", "mailto:", "tel:"]
+          exclude_start_with_list = ["https:", "http:", "#", "mailto:", "tel:"]
           exclude_endings = [".ico", ".png", ".css", "/#contact-us", ".pdf", ".html"]
           if !links.start_with?(*exclude_start_with_list) && !links.end_with?(*exclude_endings)
             if !links.start_with?("/") || !links.end_with?("/")
